@@ -1,4 +1,4 @@
-# dice-simulator
+# Dice Simulator
 A simple web application to roll dice.
 
 ## What does this do?
