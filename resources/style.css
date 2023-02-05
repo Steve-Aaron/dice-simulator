@@ -12,7 +12,7 @@
   --primary-color: rgba(243, 161, 78, 1);
   --second-color: rgba(36, 74, 155, 1);
   --primary-white: rgba(255, 255, 255, 0.75);
-  --die-size: 15vw;
+  --die-size: 10vw;
   --translateZ: calc(var(--die-size) / 2);
   --translateZanimation: calc(var(--translateZ) / 2);
   font-size:14px;
@@ -21,6 +21,7 @@
 
 html {
   background-image: url("./images/background.svg");
+  text-align:center;
 }
 
 header {
@@ -286,4 +287,30 @@ section {
 tr:nth-child(2n) > td {
   background-color: rgba(255, 255, 255, 0.8);
 
+}
+
+/* FAQ Styling */
+
+#faq {
+  padding-top: 10%;
+  color: var(--primary-white);
+  font-size:1.25rem;
+  line-height:1.5rem;
+  padding-left:50px;
+  padding-right:50px;
+  text-align:left;
+}
+
+#faq h2 {
+  font-size: 2rem;
+  padding-bottom: 3rem;
+}
+#faq p {
+  padding-bottom:1rem;
+}
+
+/*  Footer */
+
+footer {
+  height:100px;
 }
