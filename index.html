@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./resources/style.css">
+  <title>Dice Simulator WIP</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>"
+</head>
+
+<body>
+  <header>
+    <h1>Dice Simulator</h1>
+    <p>A CSS/HTML demo project.</p>
+  </header>
+  <main>
+    <section class="fixed-top" id="dice-container">
+<!-- dice go here. -->
+    </section>
+    <section class="roller">
+      <input class="btn" id="n" placeholder="e.g. d6"></input>
+      <button id="roll">Roll</button>
+    </section>
+      <section id="results-history">
+<h2>Results History</h2>
+<!-- Print results -->
+<table>
+  <tr>
+    <thead>
+    <th>Roll</th>
+    <th>Result</th>
+  </thead>
+  <tbody id="results-table">
+    <!-- results here -->
+  </tbody>
+</table>
+      </section>
+    </section>
+  </main>
+  <script src="./resources/script.js"></script>
+</body>
+
+</html>
