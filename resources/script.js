@@ -6,7 +6,6 @@ let i = 0;
 $('#roll').click(function() {
     result = [];
     n = $('#n').val().split('d');
-    console.log(`The number of die is ${n[0]} and the number of sides on each is ${n[1]}`);
     let die = n[0]; let sides = n[1];
     $('#dice-container').empty();
     if (!sides) {
@@ -17,11 +16,9 @@ $('#roll').click(function() {
         };
         if (die < 5) {
             let die_col = 100 / die;
-            console.log('Die column is ' + die_col)
             $('.fixed-top').css(`grid-template-columns`, `repeat(auto-fill, ${die_col}%)`);
         }
             else {
-                console.log('Die column is 25%');
             $('.fixed-top').css('grid-template-columns', 'repeat(auto-fill, 25%)'); 
         }
         rollDice(die, sides);
@@ -30,7 +27,6 @@ $('#roll').click(function() {
 
 rollDice = (die, sides) => {
     $('#roll').css('display', 'none');
-    console.log(`Rolling ${die} die with ${sides} sides each.`);
     for (i = 0; i < die; i++) {
         let die_code = `
         <div class="dice" id="die-number-${i}">
@@ -74,5 +70,20 @@ const add_to_history = () => {
 $('#results-table').append(`<tr>
 <td>Roll ${results_store.length}: </td>
 <td>[${results_store.slice(-1)}]</td>`);
-console.log('Added to history');
+};
+
+// Download results.
+
+const downloadFile = () => {
+    let data_results = []; 
+    for (i = 0; i < results_store.length; i++) {
+    data_results.push('Roll ' + (i + 1) + ':;' +  results_store[i].toString().replaceAll(',',';') + '\n');
+    };
+    data_results = data_results.toString().replaceAll(',','');
+    data_results = data_results.replaceAll(';',',');
+    console.log(data_results);
+    let csvContent = "data:text/csv;charset=utf-8," + data_results;
+    let encodedUri = encodeURI(csvContent);
+    console.log(`CSV: ` + csvContent)
+   window.open(encodedUri);
 };

@@ -21,6 +21,7 @@
 
 html {
   background-image: url("./images/background.svg");
+  text-align:center;
 }
 
 header {
@@ -76,7 +77,6 @@ section {
   width: 100%;
   z-index: 100;
   display:grid;
-  margin-top:10%;
 }
 
 @keyframes spin {
@@ -234,6 +234,8 @@ section {
     rotateZ(var(--translateZ));
 }
 
+/* Table Styling */
+
 #results-history {
   width: 50%;
   display:flex;
@@ -257,6 +259,21 @@ section {
   border-bottom: 1px solid black;
 }
 
+#results-history table {
+  border-collapse: collapse;
+}
+
+#results-history tbody {
+  display: block;
+  max-height: 250px;
+  overflow: auto;
+}
+#results-history thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
 #results-history th:last-child {
   text-align: right;
   color:blue;
@@ -267,11 +284,23 @@ section {
   color:navy;
 }
 
-table {
-  border-collapse: collapse;
-}
-
 tr:nth-child(2n) > td {
   background-color: rgba(255, 255, 255, 0.8);
 
+}
+
+/* FAQ Styling */
+
+#faq {
+  padding-top: 10%;
+  color: var(--primary-white);
+}
+
+#faq h2 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+#faq {
+  font-size:1.25rem;
 }
