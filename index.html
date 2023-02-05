@@ -27,19 +27,34 @@
 <h2>Results History</h2>
 <!-- Print results -->
 <table>
-  <tr>
-    <thead>
-    <th>Roll</th>
-    <th>Result</th>
-  </thead>
-  <tbody id="results-table">
-    <!-- results here -->
-  </tbody>
-</table>
-      </section>
-    </section>
-  </main>
-  <script src="./resources/script.js"></script>
+      <thead>
+      <tr>
+        <th>Roll</th>
+        <th>Result</th>
+      </tr>
+      </thead>
+      <tbody id="results-table">
+      <!-- results here -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><small><a onclick="downloadFile()">Download results</a></small></td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+  <section id="faq">
+    <h2>How to use this dice simulator</h2>
+    <p>Enter a number of die and sides in an input box, then click roll to roll your dice.</p>
+    <p>You can roll one die by putting in the kind of die you want to roll (like 'd6').</p>
+    <p>Or, roll multiple dice by putting the nunmber you want to roll in front of the letter d (like 3d20).</p>
+    <p>Then, your die will roll on screen! And every roll will be stored in your results history.</p>
+  </section>
+  <footer>
+    
+  </footer>
+</main>
+<script src="./resources/script.js"></script>
 </body>
 
 </html>
